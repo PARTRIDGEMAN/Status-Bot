@@ -3,7 +3,7 @@ import db from '../database.js'
 
 export const pingCmd = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
+		.setName('add')
 		.setDescription('Add a server')
 		.setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
 		.addStringOption((i) => i.setName('name').setDescription('Server name').setRequired(true))//server name to brodcast when a server goes down.

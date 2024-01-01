@@ -1,2 +1,3 @@
-export * from './ping.js'
+export * from './add.js'
 export * from './remove.js'
+export * from './status.js'

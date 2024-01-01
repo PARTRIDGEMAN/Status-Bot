@@ -6,8 +6,8 @@ export const pingCmd = {
 		.setName('add')
 		.setDescription('Add a server')
 		.setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
-		.addStringOption((i) => i.setName('name').setDescription('Server name').setRequired(true))//server name to brodcast when a server goes down.
-		.addStringOption((i) => i.setName('host').setDescription('Server hostname/IP').setRequired(true)) //do not put a domain e.g play.example.com instead put the ip e.g 127.0.0.1
+		.addStringOption((i) => i.setName('name').setDescription('Server name').setRequired(true)) // Server name to brodcast when a server goes down.
+		.addStringOption((i) => i.setName('host').setDescription('Server hostname/IP').setRequired(true)) // Do not put a domain e.g play.example.com instead put the ip e.g 127.0.0.1
 		.addIntegerOption((i) =>
 			i.setName('port').setDescription('Server port').setRequired(true).setMinValue(0).setMaxValue(65535)
 		)
@@ -18,10 +18,13 @@ export const pingCmd = {
 				.addChannelTypes(ChannelType.GuildText, ChannelType.GuildAnnouncement)
 				.setRequired(true)
 		),
+
 	/**
 	 *
 	 * @param {import('discord.js').ChatInputCommandInteraction} ctx
+	 * 
 	 */
+	
 	async run(ctx) {
 		await ctx.deferReply()
 

@@ -15,7 +15,7 @@ export const removeHostCmd = {
 	 */
 	
 	async run(ctx) {
-		await ctx.deferReply()
+		await ctx.deferReply({ ephemeral: true })
 		const name = ctx.options.getChannel('name', true)
 
 		let found = null

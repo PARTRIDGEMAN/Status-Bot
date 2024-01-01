@@ -26,7 +26,7 @@ export const pingCmd = {
 	 */
 	
 	async run(ctx) {
-		await ctx.deferReply()
+		await ctx.deferReply({ ephemeral: true })
 
 		const name = ctx.options.getString('name', true)
 		const host = ctx.options.getString('host', true)

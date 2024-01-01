@@ -10,7 +10,9 @@ const timeout = ms('5 seconds')
 /**
  *
  * @param {import('discord.js').Client} client
+ * 
  */
+
 export const ready = async (client) => {
 	console.log('Connected to Discord API')
 	console.log(client.user.tag)

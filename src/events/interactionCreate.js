@@ -1,7 +1,9 @@
 /**
  *
  * @param {import('discord.js').Interaction} ctx
+ * 
  */
+
 export const interactionCreate = async (ctx) => {
 	if (!ctx.isChatInputCommand() || !ctx.inGuild()) return
 

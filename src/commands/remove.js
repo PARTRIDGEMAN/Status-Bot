@@ -11,7 +11,9 @@ export const removeHostCmd = {
 	/**
 	 *
 	 * @param {import('discord.js').ChatInputCommandInteraction} ctx
+	 * 
 	 */
+	
 	async run(ctx) {
 		await ctx.deferReply()
 		const name = ctx.options.getChannel('name', true)
